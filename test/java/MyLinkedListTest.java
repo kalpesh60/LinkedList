@@ -81,4 +81,17 @@ public class MyLinkedListTest {
                          myLinkedList.tail.equals(mySecondNode);
         Assert.assertTrue(result);
     }
+
+    @Test
+    public void givenNumberWhenSearchShouldPassLinkedListResult() {
+        MyNode<Integer> myFirstNode = new MyNode<>(56);
+        MyNode<Integer> mySecondNode = new MyNode<>(30);
+        MyNode<Integer> myThirdNode = new MyNode<>(70);
+        MyLinkedList myLinkedList = new MyLinkedList();
+        myLinkedList.append(myFirstNode);
+        myLinkedList.append(mySecondNode);
+        myLinkedList.append(myThirdNode);
+        INode result = myLinkedList.search(30);
+        Assert.assertEquals(result,mySecondNode);
+    }
 }

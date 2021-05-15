@@ -52,10 +52,20 @@ public class MyLinkedList<K> {
         this.tail = tempNode;
         tempNode = tempNode.getNext();
         return tempNode;
-
     }
 
-    public void printMyNodes() {
+    public INode search(K key) {
+        INode tempNode = head;
+        while (tempNode != null && tempNode.getNext() != null) {
+            if(tempNode.getKey().equals(key)) {
+                break;
+            }
+            tempNode =tempNode.getNext();
+        }
+        return tempNode;
+    }
+
+        public void printMyNodes() {
         StringBuffer myNodes = new StringBuffer("My Nodes:");
         INode<K> tempNode = head;
         while (tempNode.getNext() != null) {
@@ -63,6 +73,7 @@ public class MyLinkedList<K> {
             if(!tempNode.equals(tail)) myNodes.append(">");
             tempNode = tempNode.getNext();
         }
+        myNodes.append(tempNode.getKey());
         System.out.println(myNodes);
     }
 }
