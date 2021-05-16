@@ -9,11 +9,15 @@ public class MyQueue {
         myLinkedList.append(myNode);
     }
 
-    public void printStack() {
+    public void printQueue() {
         myLinkedList.printMyNodes();
     }
 
     public INode peak() {
         return myLinkedList.head;
+    }
+
+    public void dequeue() {
+        myLinkedList.pop();
     }
 }
