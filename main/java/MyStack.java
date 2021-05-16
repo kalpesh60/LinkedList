@@ -16,4 +16,8 @@ public class MyStack {
     public INode peak() {
         return myLinkedList.head;
     }
+
+    public void pop() {
+        myLinkedList.pop();
+    }
 }
