@@ -1,4 +1,4 @@
-public class MyLinkedList<K> {
+public class MyLinkedList<K extends Comparable<K>> {
     public INode<K> head;
     public INode<K> tail;
 
@@ -111,3 +111,4 @@ public class MyLinkedList<K> {
         System.out.println(myNodes);
     }
 }
+
