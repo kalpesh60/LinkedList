@@ -111,4 +111,24 @@ public class MyLinkedListTest {
                          mySecondNode.getNext().equals(myNewNode);
         Assert.assertTrue(result);
     }
+
+    @Test
+    public void givenFourNumberWhenDelatingInBetweenOneShouldPassLinkedListResult() {
+        MyNode<Integer> myFirstNode = new MyNode<>(56);
+        MyNode<Integer> mySecondNode = new MyNode<>(30);
+        MyNode<Integer> myThirdNode = new MyNode<>(70);
+        MyNode<Integer> myNewNode = new MyNode<>(40);
+        MyLinkedList myLinkedList = new MyLinkedList();
+        myLinkedList.add(myFirstNode);
+        myLinkedList.append(mySecondNode);
+        myLinkedList.append(myThirdNode);
+        myLinkedList.searchAndInsert(30,myNewNode);
+        myLinkedList.searchAndDelete(40);
+        myLinkedList.printMyNodes();
+        boolean result = myLinkedList.head.getNext().equals(mySecondNode) &&
+                         mySecondNode.getNext().equals(myThirdNode) &&
+                         myLinkedList.tail.equals(myThirdNode);
+        Assert.assertTrue(result);
+        System.out.println("Linked List Size = " +myLinkedList.size());
+    }
 }
