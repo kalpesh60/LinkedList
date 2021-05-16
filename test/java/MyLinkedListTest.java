@@ -7,7 +7,7 @@ public class MyLinkedListTest {
         MyNode<Integer> myFirstNode = new MyNode<>(70);
         MyNode<Integer> mySecondNode = new MyNode<>(30);
         MyNode<Integer> myThirdNode = new MyNode<>(56);
-        MyLinkedList myLinkedList = new MyLinkedList();
+        MyLinkedList<Integer> myLinkedList = new MyLinkedList<>();
         myLinkedList.add(myFirstNode);
         myLinkedList.add(mySecondNode);
         myLinkedList.add(myThirdNode);
@@ -23,7 +23,7 @@ public class MyLinkedListTest {
         MyNode<Integer> myFirstNode = new MyNode<>(56);
         MyNode<Integer> mySecondNode = new MyNode<>(30);
         MyNode<Integer> myThirdNode = new MyNode<>(70);
-        MyLinkedList myLinkedList = new MyLinkedList();
+        MyLinkedList<Integer> myLinkedList = new MyLinkedList<>();
         myLinkedList.append(myFirstNode);
         myLinkedList.append(mySecondNode);
         myLinkedList.append(myThirdNode);
@@ -39,7 +39,7 @@ public class MyLinkedListTest {
         MyNode<Integer> myFirstNode = new MyNode<>(56);
         MyNode<Integer> mySecondNode = new MyNode<>(30);
         MyNode<Integer> myThirdNode = new MyNode<>(70);
-        MyLinkedList myLinkedList = new MyLinkedList();
+        MyLinkedList<Integer> myLinkedList = new MyLinkedList<>();
         myLinkedList.add(myFirstNode);
         myLinkedList.append(myThirdNode);
         myLinkedList.insert(myFirstNode,mySecondNode);
@@ -55,7 +55,7 @@ public class MyLinkedListTest {
         MyNode<Integer> myFirstNode = new MyNode<>(56);
         MyNode<Integer> mySecondNode = new MyNode<>(30);
         MyNode<Integer> myThirdNode = new MyNode<>(70);
-        MyLinkedList myLinkedList = new MyLinkedList();
+        MyLinkedList<Integer> myLinkedList = new MyLinkedList<>();
         myLinkedList.append(myFirstNode);
         myLinkedList.append(mySecondNode);
         myLinkedList.append(myThirdNode);
@@ -71,7 +71,7 @@ public class MyLinkedListTest {
         MyNode<Integer> myFirstNode = new MyNode<>(56);
         MyNode<Integer> mySecondNode = new MyNode<>(30);
         MyNode<Integer> myThirdNode = new MyNode<>(70);
-        MyLinkedList myLinkedList = new MyLinkedList();
+        MyLinkedList<Integer> myLinkedList = new MyLinkedList<>();
         myLinkedList.append(myFirstNode);
         myLinkedList.append(mySecondNode);
         myLinkedList.append(myThirdNode);
@@ -87,7 +87,7 @@ public class MyLinkedListTest {
         MyNode<Integer> myFirstNode = new MyNode<>(56);
         MyNode<Integer> mySecondNode = new MyNode<>(30);
         MyNode<Integer> myThirdNode = new MyNode<>(70);
-        MyLinkedList myLinkedList = new MyLinkedList();
+        MyLinkedList<Integer> myLinkedList = new MyLinkedList<>();
         myLinkedList.append(myFirstNode);
         myLinkedList.append(mySecondNode);
         myLinkedList.append(myThirdNode);
@@ -101,7 +101,7 @@ public class MyLinkedListTest {
         MyNode<Integer> mySecondNode = new MyNode<>(30);
         MyNode<Integer> myThirdNode = new MyNode<>(70);
         MyNode<Integer> myNewNode = new MyNode<>(40);
-        MyLinkedList myLinkedList = new MyLinkedList();
+        MyLinkedList<Integer> myLinkedList = new MyLinkedList<>();
         myLinkedList.add(myFirstNode);
         myLinkedList.append(mySecondNode);
         myLinkedList.append(myThirdNode);
@@ -118,7 +118,7 @@ public class MyLinkedListTest {
         MyNode<Integer> mySecondNode = new MyNode<>(30);
         MyNode<Integer> myThirdNode = new MyNode<>(70);
         MyNode<Integer> myNewNode = new MyNode<>(40);
-        MyLinkedList myLinkedList = new MyLinkedList();
+        MyLinkedList<Integer> myLinkedList = new MyLinkedList<>();
         myLinkedList.add(myFirstNode);
         myLinkedList.append(mySecondNode);
         myLinkedList.append(myThirdNode);
