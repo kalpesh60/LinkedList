@@ -58,11 +58,11 @@ public class MyLinkedList<K extends Comparable<K>> {
         INode tempNode = head;
         while (tempNode != null && tempNode.getNext() != null) {
             if(tempNode.getKey().equals(key)) {
-                break;
+                return tempNode;
             }
             tempNode =tempNode.getNext();
         }
-        return tempNode;
+        return null;
     }
 
     public void searchAndInsert(int myNode, INode myNewNode) {
@@ -109,6 +109,10 @@ public class MyLinkedList<K extends Comparable<K>> {
         }
         myNodes.append(tempNode.getKey());
         System.out.println(myNodes);
+    }
+
+    public String toString() {
+        return "MyLinkedListNodes{" + head + '}';
     }
 }
 

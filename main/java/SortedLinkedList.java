@@ -10,7 +10,7 @@ public class SortedLinkedList {
     public void add(INode newNode) {
         INode previousNode = null;
         INode currentNode = this.head;
-        while (currentNode != null && currentNode.compareTo(newNode) < 0) {
+        while (currentNode != null && currentNode.compareTo(newNode) > 0) {
             previousNode = currentNode;
             currentNode = currentNode.getNext();
         }

@@ -1,10 +1,12 @@
-public class MyNode<K extends Comparable<K>> implements INode<K> {
-    private K key;
-    private  INode<K> next;
+public class MyMapNode<K extends Comparable<K>, V> implements INode<K> {
+    K key;
+    V value;
+    MyMapNode<K,V> next;
 
-    public MyNode(K key) {
+    public MyMapNode(K key, V value) {
         this.key = key;
-        this.next = null;
+        this.value = value;
+        next = null;
     }
 
     @Override
@@ -15,15 +17,16 @@ public class MyNode<K extends Comparable<K>> implements INode<K> {
     @Override
     public void setKey(K key) {
         this.key = key;
-
     }
 
+    @Override
     public INode<K> getNext() {
         return next;
     }
 
+    @Override
     public void setNext(INode<K> next) {
-        this.next = next;
+        this.next = (MyMapNode<K, V>) next;
     }
 
     @Override
@@ -31,10 +34,18 @@ public class MyNode<K extends Comparable<K>> implements INode<K> {
         return 0;
     }
 
+    public V getValue() {
+        return value;
+    }
+
+    public void setValue(V value) {
+        this.value = value;
+    }
+
     @Override
     public String toString() {
         StringBuilder myMapNodeString = new StringBuilder();
-        myMapNodeString.append("MyMapNode{" + "K=").append(key).append("V=").append('}');
+        myMapNodeString.append("MyMapNode{" + "K=").append(key).append("V=").append(value).append('}');
         if (next != null)
             myMapNodeString.append("->").append(next);
         return myMapNodeString.toString();
