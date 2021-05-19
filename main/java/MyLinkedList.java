@@ -78,16 +78,22 @@ public class MyLinkedList<K extends Comparable<K>> {
         }
     }
 
-    public void searchAndDelete(int deleteNode) {
-        INode tempNode = head;
-        while (tempNode.getNext() != null) {
-            if (tempNode.getNext().getKey().equals(deleteNode)) {
-                INode temp = tempNode.getNext().getNext();
-                tempNode.setNext(temp);
+        public void searchAndDelete(K key) {
+            INode deleteNode = search(key);
+            INode tempNode = head;
+            if (deleteNode != null) {
+                if (head.getKey().equals(deleteNode.getKey()))
+                    pop();
+                else if (tail.getKey().equals(deleteNode.getKey()))
+                    popLast();
+                else {
+                    while (!tempNode.getNext().getKey().equals(deleteNode.getKey())) {
+                        tempNode = tempNode.getNext();
+                    }
+                    tempNode.setNext(deleteNode.getNext());
+                }
             }
-            tempNode = tempNode.getNext();
         }
-    }
 
     public int size() {
         INode tempNode = head;
